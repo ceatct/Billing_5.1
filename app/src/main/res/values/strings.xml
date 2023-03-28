@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Billing 5.1</string>
+    <string name="status">Status</string>
+    <string name="type_sub">Type: sub</string>
+    <string name="price">Price</string>
+    <string name="get_sub">get sub</string>
+    <string name="buy_item">buy item</string>
+    <string name="coins">Coins:</string>
+</resources>
