@@ -9,6 +9,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.android.billingclient.api.BillingClient;
+import com.rabbithole.billing51.try_1.Content;
+import com.rabbithole.billing51.try_1.PurchaseListener;
+import com.rabbithole.billing51.try_1.Sub;
 
 public class MainFragment extends Fragment {
 

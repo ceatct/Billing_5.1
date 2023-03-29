@@ -1,4 +1,4 @@
-package com.rabbithole.billing51;
+package com.rabbithole.billing51.try_1;
 
 import android.app.Activity;
 import android.content.Context;

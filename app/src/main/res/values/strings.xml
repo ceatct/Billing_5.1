@@ -6,4 +6,13 @@
     <string name="get_sub">get sub</string>
     <string name="buy_item">buy item</string>
     <string name="coins">Coins:</string>
+    <string name="billing_SERVICE_DISCONNECTED">billing_SERVICE_DISCONNECTED</string>
+    <string name="billing_SERVICE_UNAVAILABLE">billing_SERVICE_UNAVAILABLE</string>
+    <string name="billing_BILLING_UNAVAILABLE">billing_BILLING_UNAVAILABLE</string>
+    <string name="billing_DEVELOPER_ERROR" />
+    <string name="billing_DEVELOPER_ERRORR">billing_DEVELOPER_ERROR</string>
+    <string name="billing_ERROR">billing_ERROR</string>
+    <string name="billing_ITEM_UNAVAILABLE">billing_ITEM_UNAVAILABLE</string>
+    <string name="billing_USER_CANCELED">billing_USER_CANCELED</string>
+    <string name="billing_USER_CANCELEDD">billing_USER_CANCELED</string>
 </resources>

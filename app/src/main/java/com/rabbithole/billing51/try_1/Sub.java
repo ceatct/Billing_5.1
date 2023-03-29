@@ -1,4 +1,4 @@
-package com.rabbithole.billing51;
+package com.rabbithole.billing51.try_1;
 
 import android.app.Activity;
 import android.content.Context;
@@ -39,7 +39,7 @@ public class Sub {
             public void onBillingSetupFinished(@NonNull BillingResult billingResult) {
                 List<QueryProductDetailsParams.Product> productList = List.of(
                         QueryProductDetailsParams.Product.newBuilder()
-                                .setProductId("1_month")
+                                .setProductId("ua.com.emulatorband.nes4u_test_premium")
                                 .setProductType(BillingClient.ProductType.SUBS)
                                 .build()
                 );
@@ -79,7 +79,7 @@ public class Sub {
             public void onBillingSetupFinished(@NonNull BillingResult billingResult) {
                 List<QueryProductDetailsParams.Product> productList = List.of(
                         QueryProductDetailsParams.Product.newBuilder()
-                                .setProductId("1_month")
+                                .setProductId("ua.com.emulatorband.nes4u_test_premium")
                                 .setProductType(BillingClient.ProductType.SUBS)
                                 .build());
 

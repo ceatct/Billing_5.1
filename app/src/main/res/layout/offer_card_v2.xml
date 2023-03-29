@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="16dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_offer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_bg"
+        android:maxWidth="500dp">
+
+        <CheckBox
+            android:id="@+id/offer_checkBox"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            android:clickable="false"
+            android:button="@drawable/offer_chb_drawable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/subHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:paddingBottom="8dp"
+            android:text="1 Year"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_trial"
+            style="@style/offerCardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7 days free trial"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_first_phase"
+            style="@style/offerCardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$2.99 for the first Month"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_trial"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_base_phase"
+            style="@style/offerCardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:text="Then $2.99 /Year"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_first_phase" />
+
+        <TextView
+            android:id="@+id/tv_save_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_red"
+            android:padding="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Save 58%"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_base_phase"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/space_view"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_save_banner"
+            />
+
+        <TextView
+            android:id="@+id/tv_bottom_banner"
+            style="@style/offerCardBottomBanner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_rounded_banner"
+            android:text="Try first 7 days for free!"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/space_view"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
