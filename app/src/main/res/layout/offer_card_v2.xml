@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/rounded_bg"
         android:maxWidth="500dp">
 
         <CheckBox
@@ -22,13 +21,11 @@
             android:layout_height="30dp"
             android:layout_margin="16dp"
             android:clickable="false"
-            android:button="@drawable/offer_chb_drawable"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_title"
-            style="@style/subHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="18dp"
@@ -40,7 +37,6 @@
 
         <TextView
             android:id="@+id/tv_trial"
-            style="@style/offerCardText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="7 days free trial"
@@ -51,7 +47,6 @@
 
         <TextView
             android:id="@+id/tv_first_phase"
-            style="@style/offerCardText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$2.99 for the first Month"
@@ -62,7 +57,6 @@
 
         <TextView
             android:id="@+id/tv_base_phase"
-            style="@style/offerCardText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="16dp"
@@ -74,7 +68,6 @@
             android:id="@+id/tv_save_banner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_red"
             android:padding="4dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
@@ -97,10 +90,8 @@
 
         <TextView
             android:id="@+id/tv_bottom_banner"
-            style="@style/offerCardBottomBanner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/bottom_rounded_banner"
             android:text="Try first 7 days for free!"
             android:textSize="18sp"
             android:visibility="gone"

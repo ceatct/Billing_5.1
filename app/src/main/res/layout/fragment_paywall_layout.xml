@@ -3,25 +3,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="@drawable/main_background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/root_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="32dp">
+
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/crown_white"/>
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <ImageView
                 android:id="@+id/gold_crown"
@@ -29,12 +30,10 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/crown_gold"/>
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/textView3"
-                style="@style/premiumDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -42,19 +41,18 @@
                 android:text="@string/premium_desc_free"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imageView"
-            />
+                app:layout_constraintTop_toBottomOf="@id/imageView"/>
+
             <TextView
                 android:id="@+id/textView4"
-                style="@style/premiumDesc2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/premium_desc_free_part3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView3"
-            />
+                app:layout_constraintTop_toBottomOf="@id/textView3"/>
+
             <ProgressBar
                 android:id="@+id/billing_progress"
                 style="?android:attr/progressBarStyleLargeInverse"
@@ -83,15 +81,13 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/billing_ERROR"
-                    android:textSize="24sp"
-                />
+                    android:textSize="24sp"/>
                 <Button
                     android:id="@+id/btn_try_again"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Try again"
-                />
+                    android:text="Try again"/>
             </LinearLayout>
 
             <androidx.constraintlayout.widget.Group
@@ -103,7 +99,6 @@
 
             <TextView
                 android:id="@+id/premium_title"
-                style="@style/premiumDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -111,7 +106,8 @@
                 android:text="@string/already_subscribed_title"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"/>
 
             <TextView
                 android:id="@+id/textView2"
@@ -122,7 +118,8 @@
                 android:text="@string/already_subscribed_description"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/premium_title"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/premium_title"/>
 
             <androidx.constraintlayout.widget.Group
                 android:id="@+id/group_premium"
@@ -145,6 +142,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4">
+
                 <include
                     layout="@layout/offer_card_v2"
                     android:visibility="gone"
@@ -156,13 +154,12 @@
                 android:id="@+id/btn_premium_subscribe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ripple_rounded_square"
                 android:text="@string/btn_premium_subscribe"
                 android:layout_margin="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_bottom_text"
-                android:textColor="@color/open_downloads_button_text"
+                android:textColor="#dedede"
                 android:textSize="24sp"/>
 
             <TextView
@@ -174,6 +171,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll_offers_container"/>
+
             <LinearLayout
                 android:id="@+id/ll_no_offers"
                 android:layout_width="match_parent"
@@ -191,15 +189,13 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/premium_desc_no_offers"
-                    android:textSize="18sp"
-                />
+                    android:textSize="18sp"/>
                 <Button
                     android:id="@+id/btn_try_again2"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Try again"
-                />
+                    android:text="Try again"/>
             </LinearLayout>
 
             <androidx.constraintlayout.widget.Group
@@ -209,6 +205,7 @@
                 android:visibility="invisible"
                 tools:visibility="visible"
                 app:constraint_referenced_ids="ll_offers_container,tv_bottom_text, btn_premium_subscribe"/>
+
             <androidx.constraintlayout.widget.Group
                 android:id="@+id/group_progress"
                 android:layout_width="wrap_content"

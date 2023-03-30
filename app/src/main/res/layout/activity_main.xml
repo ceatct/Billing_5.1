@@ -6,9 +6,9 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_game"
-        android:name="com.rabbithole.billing51.MainFragment"
+        android:name="com.rabbithole.billing51.try_2.FragmentBilling"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_paywall_layout" />
 
 </FrameLayout>

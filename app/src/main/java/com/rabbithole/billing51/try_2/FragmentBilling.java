@@ -13,6 +13,8 @@ import com.rabbithole.billing51.R;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+
 public class FragmentBilling extends Fragment {
     private View groupByProgress;
     private View groupByPremium;

@@ -1,7 +1,12 @@
 package com.rabbithole.billing51.try_2;
 
-import static android.os.Build.VERSION_CODES.R;
+import static com.rabbithole.billing51.try_2.BillingClientLifecycle.LIST_OF_PRODUCTS;
+import static com.rabbithole.billing51.try_2.Product.BillingPeriod.Period.DAY;
+import static com.rabbithole.billing51.try_2.Product.BillingPeriod.Period.MONTH;
+import static com.rabbithole.billing51.try_2.Product.BillingPeriod.Period.WEEK;
+import static com.rabbithole.billing51.try_2.Product.BillingPeriod.Period.YEAR;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 import android.util.Log;
 import android.view.View;
@@ -21,6 +26,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
+import com.rabbithole.billing51.R;
 
 public class BillingViewModel extends AndroidViewModel {
     MutableLiveData<State> liveState = new MutableLiveData<>(State.LOADING);
@@ -76,7 +83,7 @@ public class BillingViewModel extends AndroidViewModel {
     }
 
     private Product.BillingPeriod getLargestOfferPeriod(List<Product.Offer> offers) {
-        Product.BillingPeriod billingPeriod = new Product.BillingPeriod(1, Product.BillingPeriod.Period.DAY);
+        Product.BillingPeriod billingPeriod = new Product.BillingPeriod(1, DAY);
         for (Product.Offer offer: offers) {
             Product.PricingPhase basePhase = offer.getBasePhase();
             if (basePhase != null && basePhase.getBillingPeriod().getDayQuantity() > billingPeriod.getDayQuantity()) {
@@ -89,19 +96,14 @@ public class BillingViewModel extends AndroidViewModel {
     private String getPeriodString(Product.BillingPeriod.Period period, int count) {
         String periodString = "none";
         @PluralsRes int pluralId = 0;
-        switch (period) {
-            case DAY:
-                pluralId = R.plurals.day;
-                break;
-            case WEEK:
-                pluralId = R.plurals.week;
-                break;
-            case MONTH:
-                pluralId = R.plurals.month;
-                break;
-            case YEAR:
-                pluralId = R.plurals.year;
-                break;
+        if (DAY.equals(period)) {
+            pluralId = R.plurals.day;
+        } else if (WEEK.equals(period)) {
+            pluralId = R.plurals.week;
+        } else if (MONTH.equals(period)) {
+            pluralId = R.plurals.month;
+        } else if (YEAR.equals(period)) {
+            pluralId = R.plurals.year;
         }
         if (pluralId != 0) {
             periodString = getApplication().getResources().getQuantityString(pluralId, count);
@@ -110,6 +112,7 @@ public class BillingViewModel extends AndroidViewModel {
         return String.format(periodString, count);
     }
 
+    @SuppressLint("StringFormatInvalid")
     @Nullable
     public String getTrialFromOffer(Product.Offer offer) {
         Product.PricingPhase phase = offer.getTrialPhase();
@@ -121,6 +124,7 @@ public class BillingViewModel extends AndroidViewModel {
                         phase.getBillingPeriod().getCount()));
     }
 
+    @SuppressLint("StringFormatInvalid")
     public String getFirstPhaseStringFromOffer(Product.Offer offer) {
         Product.PricingPhase phase = offer.getFirstPhase();
         if (phase == null) return null;
@@ -131,6 +135,7 @@ public class BillingViewModel extends AndroidViewModel {
                 getShortPeriodString(phase.getBillingPeriod()).toLowerCase(Locale.ROOT),
                 getPeriodString(phase.getBillingPeriod().getPeriod(), phase.getBillingPeriod().getCount()));
     }
+    @SuppressLint("StringFormatInvalid")
     @NonNull
     public String getBasePhaseFromOffer(Product.Offer offer) {
         String formattedPrice = "none";
@@ -158,11 +163,13 @@ public class BillingViewModel extends AndroidViewModel {
         return periodString;
     }
 
+    @SuppressLint("StringFormatInvalid")
     public String getEconomyBannerStringFromOffer(Product.Offer offer, List<Product.Offer> allOffers) {
         int economy = getEconomyPercent(offer, allOffers);
         return economy > 0 ? String.format(getApplication().getString(R.string.save_template), economy + "%") : null;
     }
 
+    @SuppressLint("StringFormatInvalid")
     public String getBottomBannerStringFromOffer(Product.Offer offer) {
         Product.PricingPhase phase = offer.getTrialPhase();
         if (phase == null) return null;

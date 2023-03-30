@@ -15,4 +15,21 @@
     <string name="billing_ITEM_UNAVAILABLE">billing_ITEM_UNAVAILABLE</string>
     <string name="billing_USER_CANCELED">billing_USER_CANCELED</string>
     <string name="billing_USER_CANCELEDD">billing_USER_CANCELED</string>
+    <string name="try_first_for_free_template">try first for free</string>
+    <string name="save_template">save template</string>
+    <string name="after_price_template">after price template</string>
+    <string name="price_for_the_first_time_template">first time price</string>
+    <string name="free_trial_template">free trial</string>
+    <string name="free_trial_templatee">free trial</string>
+    <string name="premium_desc_no_offers">premium_desc_no_offers</string>
+    <string name="premium_desc_cancellation_info">premium_desc_cancellation_info</string>
+    <string name="btn_premium_subscribe">btn_premium_subscribe</string>
+    <string name="already_subscribed_description">already_subscribed_description</string>
+    <string name="already_subscribed_title">already_subscribed_title</string>
+    <string name="premium_desc_free_part3">premium_desc_free_part3</string>
+    <string name="premium_desc_free">premium_desc_free</string>
+    <plurals name="day">1</plurals>
+    <plurals name="week">7</plurals>
+    <plurals name="month">30</plurals>
+    <plurals name="year">365</plurals>
 </resources>
