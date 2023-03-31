@@ -1,4 +1,4 @@
-package com.rabbithole.billing51;
+package com.rabbithole.billing51.try_1;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.android.billingclient.api.BillingClient;
+import com.rabbithole.billing51.R;
 import com.rabbithole.billing51.try_1.Content;
 import com.rabbithole.billing51.try_1.PurchaseListener;
 import com.rabbithole.billing51.try_1.Sub;
